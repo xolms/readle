@@ -1,0 +1,19 @@
+extend template
+block title
+	title Юзер
+block vars
+	-var auth = 1	
+	-var book = 0
+	-var search = 1
+	-var book_items = 2
+block content 
+	.user_content_wrapper
+		.left_user_content
+			include components/left_user_content
+		.right_user_content
+			include components/right_user_content
+	.works_title.about_yourself_title.leave_rewiew_text Работы		
+	-for(var x=1; x<=book_items; x++)
+		include components/book_page_sea
+	.pagin_top
+		include components/pagination

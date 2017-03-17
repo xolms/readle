@@ -1,0 +1,37 @@
+.right_social_wrapper
+	-if(auth==true)
+		.right_dropdown_wrapper
+			.right_avatar_wrapper
+				.avatar_img.display_table
+					img(src=avatar alt="avatar")
+				.avatar_name.display_table.puple=name
+			.right_dropdown_mnu_wrapper.comp
+				ul.right_dropdown_mnu_list
+					+right_dropdown_mnu('Опубликовать','ligth_green')
+					+right_dropdown_mnu('Настройки','orange')
+					+right_dropdown_mnu('Пополнить счет','yellow')
+					+right_dropdown_mnu('Выйти','green')
+		.right_buttons_wrapper
+			ul.right_buttons_list
+				li.right_button_item.button_icons_dropdown
+					span(class='right_button_img bgi img_dropdown')
+					span(class='right_button_text white text_dropdown') 111
+				span.dropdown_buttons_wrapper
+					+right_button('106','likes','pink')
+					+right_button('5','comments','white')
+					+right_button('5','presents','red')
+					+right_button('5','cals','blue')
+					+right_button('5','notes','pink')
+				+right_button_notext('friends')
+				+right_button_notext('stars')
+		.right_dropdown_mnu_wrapper.mobile
+				ul.right_dropdown_mnu_list
+					+right_dropdown_mnu('Опубликовать','ligth_green')
+					+right_dropdown_mnu('Настройки','orange')
+					+right_dropdown_mnu('Пополнить счет','yellow')
+					+right_dropdown_mnu('Выйти','green')
+	-else
+		.auth_wrapper
+			a(href="#" class="auth_link") Войти
+			span.slash_auth /
+			a(href="#" class="auth_link") Зарегестрироваться

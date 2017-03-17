@@ -1,0 +1,176 @@
+@import "bourbon"
+@import "neat"
+@import "vars"
+
+.body_wrapper
+	display: table
+	width: 100%
+.left_body_wrapper
+	display: table-cell
+	width: 146px
+	vertical-align: top
+.right_body_wrapper
+	display: table-cell
+	width: 190px
+	vertical-align: top
+.center_wrapper
+	display: table-cell
+	vertical-align: top
+	border-left: 1px solid #d1d1d1	
+	border-right: 1px solid #d1d1d1
+
+.burger_left_mnu_wrapper	
+	background-color: #d1d1d1
+	text-align: center
+	display: inline-block
+	padding: 4px
+	padding-left: 10px
+	margin-top: 10px
+.burger_left_item
+	width: 15px
+	height: 3px
+	display: block
+	margin-top: 2px
+	background-color: $dark-color
+	&:first-child
+		margin-top: 0
+
+.body_left_mnu_wrapper
+	padding: 10px 8px
+.body_left_mnu_item
+	padding: 8px 0
+	&:first-child
+		padding-top: 0	
+.body_left_mnu_href
+	+fzz(10.82px)
+	color: #1c1c1c
+	text-transform: uppercase	
+
+footer
+	display: table
+	width: 100%	
+
+.footer_center
+	background: #c6c6c6	
+	padding: 10px 12px
+	+fzz(11.83px)
+	color: #888888
+	margin-top: 20px
+	& div
+		display: inline-block
+.copy_wrapper
+	padding-right: 5px	
+.footer_link
+	color: #888888
+.protect_wrapper
+	padding-left: 5px		
+.footer_slash
+	padding: 0 5px
+.right_items_wrap
+	padding: 10px		
+.body_right_item
+	padding-bottom: 20px	
+.body_right_img
+	width: 100%
+	img
+		width: 100%
+		height: auto
+		padding-bottom: 3px
+.body_right_text
+	padding: 0 2px	
+	+fzz(13.99px)
+	color: #4d7185
+	text-decoration: underline
+.right_tablet_wrapper
+	display: none		
+
+
+.accordion_dropdown
+	cursor: pointer
+	padding: 5px 10px
+
+.accardion_dropdown_wrap
+	display: none
+	width: 100%
+	height: auto
+.left_arrow_accardion
+	+fzz(9px)	
+	position: relative
+	top: 0px
+	right: 4px
+	color: #2f2f2f
+	transition: all .25s
+.text_accardion	
+	text-transform: uppercase
+	+fzz(11px)
+	color: #2f2f2f
+.accordion_dropdown.active
+	.left_arrow_accardion
+		transform: rotate(90deg)
+
+.accardion_item
+	padding: 2px 5px
+.accardion_link
+	color: #337287
+	+fzz(11px)	
+	background-color: transparent
+	padding: 3px 4px
+	transition: all .25s
+.accardion_link
+	&:hover,&:focus
+		background-color: #dc8a1f
+		color: #fff
+.accardion_item.active
+	.accardion_link
+		background-color: #dc8a1f
+		color: #fff
+
+.search_comp_wrap
+	padding: 5px 0
+	text-align: center
+.search_comp_title
+	padding: 5px 8px
+	text-align: left
+.search_comp_input
+	height: 25px
+	width: 125px
+	position: relative
+	left: 8px
+	display: block	
+	border: 1px solid #c5cac6	
+.filter_form_wrap
+	position: relative
+	background-color: #d1d1d1
+	width: 100%																									
+.input_filter
+	width: 96%
+	margin: 0
+	position: relative
+	bottom: 0px
+	padding: 10px 10px
+	border: none	
+	background-color: #d1d1d1
+	color: #313131
+	+fzz(15px)
+	text-overflow: ellipsis
+	&:focus
+		outline: none
+.search_icon
+	position: relative
+	left: 0px
+.filter_wrapper
+	position: relative
+
+.filter_list
+	position: absolute
+	z-index: 2
+	display: none
+	background-color: #d1d1d1
+	width: 100%
+.filter_item
+	padding: 6px 10px	
+	a
+		border-bottom: 1px dashed #333
+		display: block
+		padding-bottom: 3px
+		color: #333

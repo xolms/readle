@@ -1,0 +1,14 @@
+.pagination_wrapper.section_border
+	.left_pag_wrap.table_cell.mobile_none
+		a(href="#" class="left_pag_link side_pag_link") ← Предыдущая
+	.center_pag_wrap.table_cell
+		ul.pagination_list
+			+pagination_item(1)
+			+pagination_item_link(2)
+			+pagination_item_link(3)
+			+pagination_item_link(4)
+			+pagination_item_link(5)
+			+pagination_item_link_dot('...')
+			+pagination_item_link(556)
+	.right_pag_wrap.table_cell.mobile_none
+		a(href="#" class="right_pag_link side_pag_link") Следующая →

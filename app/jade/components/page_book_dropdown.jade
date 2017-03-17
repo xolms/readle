@@ -1,0 +1,17 @@
+.book_dropdown_wrapper
+	.left_book_dropdown.display_inline
+		a(href="#" class="book_dropdown_link") ← Предисловие
+	.center_book_dropdown.display_inline
+		.book_dropdown_wrap
+			.book_dropdown_active
+				span.dropdown_active_text 1 — Не гони ты ночь так безумно
+				i.fa.fa-angle-down.dropdown_active_arrow
+			.book_dropdown_close
+				ul.book_dropdown_list
+					-var item=5
+					-for (var i=1; i<=item; i++) {
+						+bookdropdown
+					-}
+
+	.right_book_dropdown.display_inline
+		a(href="#" class="book_dropdown_link") Не сходи с ума →

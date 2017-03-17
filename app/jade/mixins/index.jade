@@ -1,0 +1,75 @@
+mixin top_mnu(classhref,name,color)
+	li.top_mnu_item
+		a(href="#" class="top_mnu_href "+classhref+' ' +color)=name
+mixin top_mnu_active(classhref,name,color)
+	li.top_mnu_item.active
+		a(href="#" class="top_mnu_href "+classhref+' ' +color)=name
+mixin top_mnu_publish
+	li.top_mnu_item.publish_item
+		a(href="#" class="top_mnu_href publish_href") Опубликовать
+mixin right_dropdown_mnu(name,color)
+	li.right_dropdown_mnu_item
+		a(href="#" class="right_dropdown_mnu_href " +color)=name		
+mixin right_button(name,classhref,color)
+	li.right_button_item
+		a(href="#" class="right_button_href")
+			span(class='right_button_img bgi img_'+classhref)
+			span(class='right_button_text '+color+' text_'+classhref)=name
+mixin right_button_notext(classhreff)
+	li.right_button_item
+		a(href="#" class="right_button_href")
+			span(class='right_button_img bgi img_'+classhreff)
+mixin body_left_mnu_item(text)
+	li.body_left_mnu_item
+		a(href="#" class="body_left_mnu_href")=text				
+mixin right_wrapper
+	.body_right_item
+		a(href="#")
+			.body_right_img
+				img(src="img/right1.jpg" alt="123")
+			.body_right_text 12 простых советов от известных писателей, собранные специально для вас →
+
+mixin accardion_wrap(text)
+	.accardion_item_wrap
+		.accordion_dropdown
+			i.fa.fa-chevron-right.left_arrow_accardion
+			span.text_accardion=text
+		include ../sectiontemplate/leftacaritems		
+
+mixin accardion_item(text)
+	li.accardion_item
+		a(href="#" class="accardion_link")=text
+mixin accardion_item_active(text)
+	li.accardion_item.active
+		a(href="#" class="accardion_link")=text
+mixin book_filter_item(text,link)
+	.book_filter_item
+		.book_filter_title.display_inline=text
+		a(href="#").book_filter_link.display_inline=link
+mixin book_filter_item_tolink(text,link1,link2)
+	.book_filter_item
+		.book_filter_title.display_inline=text
+		a(href="#").book_filter_link.display_inline=link1
+		a(href="#").book_filter_link=link2		
+
+mixin bookdropdown
+	li.book_dropdown_item
+		a(href="#" class="book_dropdown_href")  Lorem ipsum dolor.
+
+mixin pagination_item(text)
+	li.pagination_item
+		span.pagination_text.active=text
+mixin pagination_item_link(text)
+	li.pagination_item
+		a(href='#').pagination_text.link=text
+mixin pagination_item_link_dot(text)
+	li.pagination_item
+		a(href='#').pagination_text.dot=text
+
+mixin button_bottom(text,col)
+	li.bottom_buttons_item
+		a(href="#").bottom_buttons_href=text
+			span.bottom_button_col=col
+mixin button_bottom_nocol(text)
+	li.bottom_buttons_item
+		a(href="#").bottom_buttons_href=text

@@ -1,0 +1,73 @@
+@import "bourbon"
+@import "neat"
+@import "vars"
+
+
+*
+	margin: 0
+	padding: 0
+p
+	display: block	
+html
+	height: 100%	
+body
+	min-width: 320px
+	font-size: 16px
+	height: 100%
+	font-family: "Verdana", serif
+	padding: 0
+	overflow-x: hidden
+	margin: 0 auto
+	background: #e1e1e1
+.wrapper_html
+	height: 100%
+	width: 100%
+	display: table
+.wrapper_body
+	display: table-row
+	height: 100%
+a
+	text-decoration: none
+	&:hover,&:focus
+		text-decoration: none
+
+.display_inline
+	display: inline-block
+.display_table
+	display: table-cell	
+.bgi
+	background-repeat: no-repeat
+	background-position: center center
+	position: relative	
+ul
+	list-style-type: none
+
+.yellow
+	color: #eccb3e
+.puple
+	color: #a372cb
+.red
+	color: #c13939
+.blue 
+	color: #7dd7f7	
+.ligth_green
+	color: #90ffb3
+.orange
+	color: #db6c30
+.green
+	color: #529164	
+.pink
+	color: #cc5e81
+.white
+	color: #fff		
+.mobile_display
+	display: none	
+
+.section_border
+	border-bottom: 1px solid #d1d1d1
+	padding: 10px	
+
+@import 'header'
+@import 'body'
+@import 'section'	
+@import "media"

@@ -1,0 +1,19 @@
+.top_mnu_wrapper
+	ul.top_mnu_list
+		+top_mnu('works','Произведения','yellow')
+		+top_mnu_active('authors','Авторы','puple')
+		+top_mnu('critics','Критики','red')
+		+top_mnu('applications','Заявки','blue')
+		+top_mnu_publish
+	ul.left_body_mnu.mobile_display
+	.user_pos_wrapper.mobile_display
+		a(href="#" class="roothref") Readle.ru
+		span.slash_pos /
+		a(href="#" class="userhref") Черная овечка
+		span.slash_pos /
+		a(href="#") Как творить, а не вытворять
+		span.slash_pos /
+		a(href="#") 1 — Не гони ты ночь так безумно!..
+	.searh_wrapper_mobile.mobile_display
+		.searh_title Поиск
+		input(type="text" class="searh_mobile_input")

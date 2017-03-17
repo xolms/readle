@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 68 63.3" style="enable-background:new 0 0 68 63.3;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#C2617F;}
+	.st1{fill:#934F5D;}
+	.st2{fill:none;}
+	.st3{fill:#C2617F;stroke:#934F5D;stroke-width:2;stroke-miterlimit:10;}
+	.st4{font-family:'MyriadPro-Regular';}
+	.st5{font-size:23px;}
+	.st6{fill:#C2617F;stroke:#934F5D;stroke-miterlimit:10;}
+	.st7{font-size:12px;}
+</style>
+<g>
+	<path class="st0" d="M60.5,34L60.5,34L34,60.5l0,0l0,0L7.5,34l0,0c-7.3-7.3-7.3-19.2,0-26.5c7.3-7.3,19.2-7.3,26.5,0l0,0l0,0l0,0
+		l0,0c7.3-7.3,19.2-7.3,26.5,0S67.8,26.6,60.5,34z"/>
+	<path class="st1" d="M34,63.3L6,35.4C-2,27.3-2,14.1,6.1,6.1C13.7-1.6,25.8-2,34,4.8C42.1-2,54.3-1.6,61.9,6.1
+		c8.1,8.1,8.1,21.2,0,29.3L34,63.3z M34,57.7l25.1-25.1c6.5-6.5,6.5-17.1,0-23.7s-17.1-6.5-23.7,0L34,10.3l-1.4-1.4
+		C26,2.4,15.4,2.4,8.9,8.9S2.4,26,8.9,32.6L34,57.7z"/>
+</g>
+<rect x="34" y="15.7" class="st2" width="24.4" height="28.3"/>
+<text transform="matrix(1 0 0 1 33.9798 32.0012)" class="st3 st4 st5">+</text>
+<rect x="45.1" y="13.1" class="st2" width="9.1" height="18.9"/>
+<text transform="matrix(1 0 0 1 45.0882 21.6423)" class="st6 st4 st7">+</text>
+</svg>

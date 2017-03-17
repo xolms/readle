@@ -1,0 +1,148 @@
+extend template
+block title
+	title index
+block vars
+	-var auth = 1	
+	-var book = 1
+block content 
+	.book_top_wrapper.section_border
+		.book_name_wrapper
+			.book_img_wrapper
+				img(src="img/avatar.png", alt="avatar")
+			.book_title_wrapper
+				.book_top_title
+					h2.book_title Как творить а не вытворять
+					span.book_likes +106
+				.book_bottom_title
+					.author_title.display_inline Автор
+					a(href="#").author_name=name
+		.book_filters_wrapper
+			+book_filter_item_tolink('Фэндом:','Роулинг Джоан «Гарри Поттер»','Роулинг Джоан «Гарри Поттер» (кроссовер)')
+			+book_filter_item('Пейринг или персонажи:','Гарри Поттер/Северус Снейп')
+			+book_filter_item('Рейтинг:','NC-17')
+			+book_filter_item('Жанры:','Слеш')
+			+book_filter_item('Предупреждения:','Мэри Сью (Марти Стью)')
+			+book_filter_item('Размер:','Слеш')
+			+book_filter_item('Статус:','В процессе')
+			.book_filter_item.book_filter_description
+				.book_filter_title Описание:
+				p Ежедневно читайте поэзию. Поэзия хороша тем, что разминает мышцы мозга, которые мы задействуем крайне редко. Поэзия развивает чувства и держит их в тонусе. Она помогает нам осознавать собственный нос, глаза, уши, язык и руки. И самое главное, поэзия — концентрированная метафора или сравнение. Эти метафоры, как японские бумажные цветы, могут развертываться в гигантские фигуры. Идеи разбросаны по всем книгам стихов, однако мне редко когда доводилось слышать, чтобы преподаватели писательского мастерства рекомендовали студентам читать поэзию.
+				p © Бредбери, “Дзен в искусстве написания книг”
+	include components/page_book_dropdown
+	.book_read_wrapper.section_border
+		h2 Не гони ты ночь так безумно!…
+		blockquote Ты пройдешь по росе перед сном, <br>
+			|Ты уснешь, ай увидишь город - <br>
+			|Город, крытый серебром… <br>
+			|Эх, кабы серебро то пальцем тронуть… <br>
+			|Ночь устала показывать сны. <br>
+			|Кончен бал, и окно открыто. <br>
+			|Тает золото луны… <br>
+			|Эх, пока ночь, лети… <br>
+			|Маргарита… <br>
+		p Гарри прижал костяшки пальцев к губам, вдыхая теплый мятный запах собственного дыхания. Поежившись от холодного воздуха подземелий, отчаянно контрастирующего с температурой собственного дыхания, Гарри сжал кулаки, ощущая, как неуклонно покидает его пальцы тепло. 
+		p Всего несколько минут и его пальцы окончательно окоченеют. И это даже несмотря на пылающее ощущение в щеках, которое вообще не поддается контролю.
+		p Выдохнув с кривоватым подобием улыбки, Гарри собрался с духом и постучал.
+		p За дверью не послышалось и отзвука от шагов алхимика. Заходить или даже попросту заглядывать внутрь без разрешения грозило снятием баллов и отработками, так что Гарри терпеливо поднял глаза к потолку и привстал на мыски, покачиваясь.
+		p Вперед-назад, вперед-назад. 
+		p Мыски-пятки, пятки-мыски.
+		.book_read_likes_wrap
+			.book_read_likes_item
+				a(href="#")
+					span.me_like.pink Мне нравиться
+					span.bgi.bg_likes
+					span.likes_col.pink 1000 	
+			.book_read_likes_item
+				a(href="#")
+					span.bgi.bg_favorit
+					span.favorit_col 1000	
+	include components/page_book_dropdown
+	.author_comment_wrapper.section_border
+		.author_comment_avatar
+			a(href="#" class="author_comment_link link_avatar")
+				img(src=avatar, alt="avatar")
+				span.author_status онлайн
+		.author_comment_right_wrapper
+			.author_comment_top_wrapper
+				a(href="#" class="author_comment_link link_text") Творческая_Крейзи
+				span.status_user_comment.user_author автор 
+			.author_comment_center_wrapper
+				.comment_author_text_wrap
+					p Буду благодарна за любые комментарии, даже самые негативные — единственный способ сделать что-то хорошее — совершенствоваться!
+					p бла К каждой страничке и  работе в целом автор может оставлять отдельный комментарий-примечание. 	
+	.leave_rewiew_wrapper.section_border
+		form(action="#")
+			.leave_rewiew_text Оставить отзыв
+			.author_comment_wrapper
+				.author_comment_avatar
+					a(href="#" class="author_comment_link link_avatar")
+						img(src=avatar, alt="avatar")
+						span.author_status онлайн
+				.author_comment_right_wrapper
+					.author_comment_top_wrapper
+						a(href="#" class="author_comment_link link_text name")=name
+					.author_comment_center_wrapper
+						.comment_author_text_wrap.comment_write
+							textarea(name="nmae", class="leave_rewiev_area")
+					.author_comment_bottom_wrapper
+						input(type="submit" value="Отправить" class="submit_comment")
+	.leave_rewiew_wrapper
+		.leave_rewiew_text.rewiev_text_wrap Отзывы
+		ul.commens_list_wrap
+			li
+				.author_comment_wrapper.section_border
+					.author_comment_avatar
+						a(href="#" class="author_comment_link link_avatar")
+							img(src=avatar, alt="avatar")
+							span.author_status онлайн
+					.author_comment_right_wrapper
+						.author_comment_top_wrapper
+							a(href="#" class="author_comment_link link_text name") Творческая_Крейзи
+							span.status_user_comment.user_critic критик		
+						.author_comment_center_wrapper
+							.comment_author_text_wrap.no_bg.comment_dark
+								p Супер
+						.author_comment_bottom_wrapper.comment_b_wrap
+							.left_bottom_author
+								span.author_comment_date 5 июл в 2:06 
+								span.slash_author |
+								a(href="#" class="write_comment_link") Коментировать
+							.right_bottom_author
+								.book_read_likes_item.comment_likes
+									a(href="#")
+										span.me_like.pink Мне нравиться
+										span.bgi.bg_likes
+										span.likes_col.pink 1000 	
+								.book_read_likes_item.comment_likes
+									a(href="#")
+										span.bgi.bg_favorit
+										span.favorit_col 1000	
+				ul.anser_list_wrap
+					li
+						.author_comment_wrapper.section_border
+							.author_comment_avatar
+								a(href="#" class="author_comment_link link_avatar")
+									img(src=avatar, alt="avatar")
+									span.author_status онлайн
+							.author_comment_right_wrapper
+								.author_comment_top_wrapper
+									a(href="#" class="author_comment_link link_text name") Творческая_Крейзи
+									span.status_user_comment.bgi.bg_comment_anser
+									.comment_author_text_wrap.no_bg.comment_dark
+										p Супер
+									.author_comment_bottom_wrapper.comment_b_wrap
+										.left_bottom_author
+											span.author_comment_date 5 июл в 2:06
+											span.slash_author |
+											a(href="#" class="write_comment_link") Ответить
+										.right_bottom_author
+											.book_read_likes_item.comment_likes
+												a(href="#")
+												span.me_like.pink Мне нравиться
+												span.bgi.bg_likes
+												span.likes_col.pink 1000
+											.book_read_likes_item.comment_likes
+												a(href="#")
+													span.bgi.bg_favorit
+													span.favorit_col 1000
+	include components/pagination													

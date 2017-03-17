@@ -1,0 +1,553 @@
+@import "bourbon"
+@import "neat"
+@import "vars"
+
+//Страница книги
+.book_name_wrapper
+	display: table
+	width: 100%
+.book_img_wrapper
+	width: 54px
+	display: table-cell
+	vertical-align: top
+	img
+		width: 100%
+		height: auto
+		border: 2px solid #a372cb
+.book_title_wrapper
+	vertical-align: top
+	display: table-cell
+	padding-left: 15px	
+	position: relative
+.book_title
+	+fzz(26.11px)
+	color: #353535
+	width: 85%
+	position: relative
+	bottom: 0
+	line-height: 27px
+.book_likes
+	+fzz(18.65px)	
+	position: absolute
+	top: 0		
+	color: #cc5e81
+.book_bottom_title
+	padding-top: 5px	
+.author_title
+	color: #717171
+	+fzz(11.19px)
+	text-transform: uppercase
+	padding-right: 5px
+.author_name
+	+fzz(18.65px)
+	color: #b473cf
+
+.book_filter_item
+	padding: 4px 0
+	&:first-child
+		padding-top: 6px
+.book_filter_title
+	text-transform: uppercase
+	+fzz(11.04px)
+	color: #8d8d8d
+	padding-right: 5px	
+.book_filter_link
+	+fzz(14.71px)
+	font-style: italic
+	color: #1a1a1a
+	text-decoration: underline
+	margin-right: 10px
+	display: inline
+.book_filter_description
+	padding: 8px 0 0
+	p 
+		margin-top: 10px
+		margin-bottom: 10px
+		+fzz(14.92px)
+		color: #1c1c1c
+		&:last-child
+			margin-bottom: 0
+
+.book_dropdown_wrapper
+	display: table
+	padding: 5px 10px
+	border-bottom: 1px solid #d1d1d1
+	width: 100%
+.left_book_dropdown,.center_book_dropdown,.right_book_dropdown
+	display: table-cell
+	vertical-align: middle	
+.left_book_dropdown
+	text-align: left	
+.right_book_dropdown
+	text-align: right	
+.center_book_dropdown
+	text-align: center	
+.book_dropdown_link
+	+fzz(15.12px)
+	color: #141414
+	text-decoration: underline
+	&:hover,&:focus
+		text-decoration: none	
+.book_dropdown_wrap 
+	position: relative
+	width: 245px
+	margin: 0 auto	
+.book_dropdown_active
+	background-color: #d1d1d1
+	padding: 3px 6px
+	width: 100%
+	cursor: pointer
+	display: inline-block	
+.dropdown_active_text
+	color: #141414
+	+fzz(11.62px)
+	position: relative
+	bottom: 1px
+	right: 5px
+.dropdown_active_arrow
+	transition: all .25s
+	position: relative
+	left: 10px
+	top: 1px
+
+.book_dropdown_close
+	position: absolute
+	z-index: 2
+	height: 55px
+	overflow-y: scroll
+	display: none
+	background-color: #d1d1d1
+	width: 100%	
+.book_dropdown_item
+	text-align: left	
+	padding: 3px 5px
+.book_dropdown_href
+	+fzz(12px)
+	color: #141414	
+
+.book_dropdown_active.active
+	.dropdown_active_arrow
+		transform: rotate(180deg)
+
+
+
+.book_read_wrapper
+	h2 
+		+fzz(20.33px)
+		color: #1c1c1c
+		margin-bottom: 15px
+	blockquote
+		font-style: italic
+		+fzz(15px)
+		color: #1c1c1c	
+		text-align: right
+	p 
+		+fzz(17px)
+		color: #1c1c1c
+		margin: 15px 0
+
+.book_read_likes_wrap
+	text-align: right
+	a
+		+fzz(16.09px)
+.book_read_likes_item
+	display: inline-block	
+.favorit_col
+	color: #c8892e	
+	padding-left: 4px
+.me_like
+	padding-right: 5px	
+.bg_likes
+	background-image: url("../img/like.svg")
+	width: 20px
+	height: 20px
+	display: inline-block
+	position: relative
+	top: 4px	
+.likes_col
+	padding-left: 5px		
+.bg_favorit
+	display: inline-block
+	width: 20px
+	height: 20px
+	position: relative
+	background-image: url("../img/fav_filled.svg")
+	top: 2px	
+.author_comment_wrapper
+	display: table
+	width: 100%	
+.author_comment_avatar
+	display: table-cell
+	vertical-align: top
+	width: 50px
+.author_comment_right_wrapper
+	display: table-cell
+	vertical-align: top	
+	padding-left: 10px
+.author_comment_link.link_avatar
+	img
+		width: 50px
+		border: 1px solid #a372cb	
+.author_status
+	display: block
+	text-align: center
+	+fzz(11.83px)
+	color: #5c8c4b
+.author_comment_link.link_text			
+	color: #1c1c1c
+	+fzz(17.48px)
+	text-decoration: underline
+	&:hover,&:focus
+		text-decoration: none
+.status_user_comment
+	padding: 2px 4px
+	color: #fff
+	margin-left: 3px
+	+fzz(10.11px)
+	position: relative
+	left: 5px
+	bottom: 5px
+.user_author	
+	background-color: #8760a7
+.user_critic
+	background-color: #c65757	
+.author_comment_center_wrapper
+	margin-top: 7px	
+.comment_author_text_wrap
+	position: relative
+	padding: 10px
+	color: #fff
+	background-color: #8860a7	
+	&.italic
+		font-style: italic
+	&.darken
+		background-color: #151515
+		margin-bottom: 15px
+		&::after
+			@include triangle(16px, #151515, left)
+			top: 10%
+			left: -7px
+	p
+		+fzz(15px)
+		margin-top: 20px
+		&:first-child
+			margin-top: 0
+	&::after
+		content: ''
+		position: absolute
+		display: block
+		@include triangle(16px, #8760a7, left)
+		top: 0px
+		left: -8px
+
+
+.leave_rewiew_text
+	padding: 10px 0
+	padding-top: 0
+	text-transform: uppercase
+	+fzz(11.19px)
+	color: #8d8d8d		
+.link_text.name	
+	text-decoration: none
+	color: #565656
+	+fzz(13px)
+	font-weight: bold
+.comment_author_text_wrap.comment_write
+	background-color: transparent
+	padding: 0
+	&::after
+		@include triangle(16px, #fff, left)
+.leave_rewiev_area
+	border: none
+	width: 100%
+	min-height: 70px
+	resize: none
+	padding: 5px 10px
+	&:focus
+		outline: none		
+.author_comment_bottom_wrapper
+	margin-top: 10px
+
+
+.rewiev_text_wrap
+	padding: 10px
+	padding-bottom: 0
+.submit_comment
+	color: #fff
+	background-color: #755c8a
+	border: 2px solid #5d357c		
+	+fzz(12.45px)
+	padding: 7px 10px
+	border-radius: 3px
+.commens_list_wrap
+	border-bottom: 1px solid #d1d1d1	
+.no_bg
+	background: none
+	padding: 5px 10px
+	&::after
+		display: none
+.comment_dark
+	padding: 0 0px
+	margin-bottom: 3px
+	p 
+		color: #565656	
+		margin-top: 7px
+		&:first-child
+			margin-top: 0
+
+.comment_b_wrap
+	display: table
+	width: 100%
+
+.left_bottom_author
+	display: table-cell
+	text-align: left
+	vertical-align: bottom
+	+fzz(12.87px)
+	color: #686868
+.slash_author
+	padding: 0 3px	
+.right_bottom_author
+	display: table-cell
+	text-align: right
+	vertical-align: bottom
+.comment_b_wrap
+	margin-top: 0	
+.comment_likes
+	+fzz(12.87px)
+	.bg_likes
+		width: 15px
+		height: 15px
+		top: 3px
+	.bg_favorit
+		width: 15px
+		height: 15px
+		top: 2px	
+.write_comment_link
+	color: #4d7185
+.commens_list_wrap .anser_list_wrap
+  padding-left: 20px
+
+
+
+.pagination_wrapper
+	display: table
+	width: 100%
+.table_cell
+	display: table-cell
+	vertical-align: top
+.left_pag_wrap
+	text-align: left
+.right_pag_wrap
+	text-align: right
+.side_pag_link
+	color: #141414
+	+fzz(15.12px)
+.center_pag_wrap
+	text-align: center
+.pagination_item	
+	margin: 0 2px
+	display: inline-block
+.pagination_text
+	+fzz(13.25px)	
+	padding: 2px 6px
+.pagination_text
+	&.link
+		background-color: #c8892f
+		color: #fff
+		transition: all .25s
+		&:hover
+			background-color: lighten(#c8892f,10%)
+	&.active
+		background-color: transparent
+		color: #141414	
+	&.dot
+		background-color: #fff
+		color: #141414
+		border: 1px solid #c4c8c4		
+.search_pad
+	padding: 7px 10px
+	span
+		+fzz(14px)
+
+
+.table_book
+	display: table
+	width: 100%
+.left_table_book 
+	display: table-cell
+	vertical-align: top	
+	width: 45%		
+.right_table_book
+	display: table-cell
+	vertical-align: top	
+.book_result_margin
+	padding: 10px
+	padding-bottom: 20px
+.pagin_top
+	border-top: 1px solid #d1d1d1	
+.user_content_wrapper
+	display: table
+	width: 100%	
+	border-bottom: 1px solid #d1d1d1
+.left_user_content
+	display: table-cell
+	width: 250px	
+	vertical-align: top
+	padding: 10px 10px
+.right_user_content
+	display: table-cell
+	padding: 10px
+	vertical-align: top
+.big_avatar_wrap
+	padding-bottom: 10px
+.big_avatar
+	width: 100%
+.top_buttons_wrap
+	background-color: #d2d2d2
+	padding: 10px
+	a
+		+fzz(12px)
+		display: block
+		text-align: center
+.send_message
+	color: #fff	
+	background-color: #b473cf
+	padding: 4px 0	
+	margin-bottom: 7px
+.regular_reader
+	background-color: #151515
+	color: #fff
+	padding: 4px 0	
+.bottom_buttons_item
+	margin: 10px 0	
+.bottom_buttons_href
+	display: block
+	text-align: center
+	padding: 7px 0
+	background-color: #d2d2d2
+	text-transform: uppercase
+	+fzz(12px)	
+	color: #151515
+.bottom_button_col
+	padding-left: 3px	
+.user_page_name
+	+fzz(20px)
+	color: #151515
+	text-decoration: underline	
+.user_page_name_wrap
+	margin-bottom: 15px	
+.about_yourself_title
+	+fzz(14px)	
+.about_yourself_block
+	p
+		display: block
+		padding: 7px 0
+		color: #151515
+		+fzz(16px)	
+.record_title_wrap
+	margin-top: 10px
+	margin-bottom: 0px
+	padding: 6px 10px
+	display: table
+	width: 100%
+	background-color: #d2d2d2		
+.record_title_left
+	text-transform: uppercase
+	+fzz(15px)
+	display: table-cell
+	text-align: left
+	color: #0c0c0c
+.record_title_right
+	text-align: right
+	+fzz(10px)
+	position: relative
+	bottom: 2px
+	text-transform: uppercase
+	a
+		color: #8d8d8d	
+.border_comment
+	border-bottom: 1px solid #d1d1d1
+	padding: 10px 0
+.record_list_wrap
+	li:first-child
+		padding-top: 0
+	li:last-child
+		.border_comment
+			border-bottom: none
+			padding-bottom: 0
+.works_title
+	padding: 10px
+	padding-bottom: 0
+
+
+.registr_title
+	text-align: center
+	margin: 20px 0
+	color: #0c0c0c
+	+fzz(23px)
+
+.registr_wrapper
+	margin-top: 5%				
+.register_item
+	display: table
+	width: 90%
+	margin: 0 auto	
+	margin-bottom: 15px
+.description_login
+	color: #2f2f2f	
+	font-style: italic
+	+fzz(13px)
+	line-height: 25px
+	padding-left: 10px
+	a
+		margin-left: 5px
+		color: darken(#2f2f2f,30%)
+		text-transform: uppercase
+.right_item_reg
+	display: table-cell	
+	padding-left: 10px
+.registr_label
+	display: table-cell
+	text-align: right
+	width: 200px
+	color: #0c0c0c
+	+fzz(11px)
+	font-weight: bold
+
+.registr_input
+	height: 30px
+	width: 100%
+	background-color: #f8f8f8
+	border: 1px solid #c5cac6
+	padding: 0 5px
+	+fzz(14px)	
+	&:focus
+		outline: none
+		background-color: darken(#f8f8f8,15%)
+	&.error
+		border: 1px solid red	
+	&.not_error
+		border: 1px solid green	
+.error_block	
+	color: red	
+	+fzz(14px)
+	text-align: center
+	margin: 3px 0
+.reg_sub_item
+	text-align: center
+
+.reg_submut
+	width: 250px
+	margin-top: 40px	
+	@include linear-gradient(#23473b 0, #21453a 50%, #193d31 100%)
+	color: #07ffb0
+	height: 40px
+	+fzz(16px)
+	font-weight: normal
+	letter-spacing: 1px
+	border-radius: 10px
+	transition: all .25s
+	&:hover,&:focus
+		background: darken(#23473b,5%)
+		color: #fff

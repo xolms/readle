@@ -1,0 +1,36 @@
+extend template
+block title
+	title Регистрация
+block vars
+	-var auth = 0	
+	-var book = 0
+	-var search = 0
+block content 
+	.registr_title Регистрация нового пользователя
+	.registr_wrapper
+		form
+			.register_item.login
+				label.registr_label Имя пользователя:
+				.right_item_reg
+					input(type="login" name="name" class="registr_input" id="name")
+					div.error_block
+					.description_login Можно использовать любые символы, но только ники из латинских букв, знака пробела, точки, тире могут стать вашим персональным адресом на нашем сайте. <br>Например: Readle.ru/Primer <br>В случае же выбора никнейма с русскими буквами или специальными символами, или чередой русских и английских символов, вашим адресом будет строка вида Readle.ru/authors/1548949 <br>Подробнее об этой услуге и данных ограничениях вы можете почитать
+						a(href="#") тут.
+			.register_item.password
+				label.registr_label Пароль:
+				.right_item_reg
+					input(type="password" name="password"  class="registr_input" id="password")
+					div.error_block
+			.register_item.repeat_password
+				label.registr_label Повтор пароля:
+				.right_item_reg
+					input(type="password" name="repeat_password" class="registr_input" id="repeat_password")
+					div.error_block
+			.register_item.email
+				label.registr_label Электронный адрес (E-mail):
+				.right_item_reg
+					input(type="email" name="email"  class="registr_input" id="email")
+					div.error_block
+			.register_item.submit
+				.right_item_reg.reg_sub_item
+					input(type="submit" value="Зарегистрироваться!" class="registr_input reg_submut")			

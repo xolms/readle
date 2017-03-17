@@ -1,0 +1,13 @@
+extend template
+block title
+	title поиск
+block vars
+	-var auth = 1	
+	-var book = 0
+	-var search = 1
+	-var book_items = 5
+block content 
+	-for(var x=1; x<=book_items; x++)
+		include components/book_page_sea
+	.pagin_top
+		include components/pagination

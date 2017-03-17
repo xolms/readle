@@ -1,0 +1,24 @@
+.left_body_wrapper
+	-if(auth==1)
+		.burger_left_mnu_wrapper
+			.burger_left_item
+			.burger_left_item
+			.burger_left_item
+		.body_left_mnu_wrapper
+			ul.body_left_mnu_list
+				ul.dropdown_body_left_mnu
+					+body_left_mnu_item('Моя страница')
+					+body_left_mnu_item('Мои читатели')
+					+body_left_mnu_item('Мои произведения')
+					+body_left_mnu_item('Мои сборники')
+					+body_left_mnu_item('Мои отзывы')
+					+body_left_mnu_item('Мои авторы')
+					+body_left_mnu_item('Мои достижения')
+					+body_left_mnu_item('Настройки')
+		-if(book==false)
+			.search_comp_wrap
+				.search_comp_title Поиск
+				input(type="text" class="search_comp_input")
+		include leftacar
+	-else
+		include leftacar

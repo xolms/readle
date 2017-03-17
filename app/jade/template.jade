@@ -1,0 +1,45 @@
+include mixins/index
+-var name = 'aixie'
+-var avatar = 'img/avatar.png'
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+		block title	
+		
+		include libs/styles
+	body
+		block vars
+		.wrapper_html
+			.wrapper_body
+				header
+					include header/template
+				.body_wrapper
+					include sectiontemplate/left
+					.center_wrapper
+						-if(book==true)
+							.filter_wrapper
+								.filter_form_wrap
+										form(action="#" class="form_filter")
+											input(type="text" class="input_filter" placeholder="Ваш текст")
+											i.fa.fa-search.search_icon
+								ul.filter_list
+									li.filter_item 
+										a(href="#")  Lorem ipsum dolor sit amet.
+									li.filter_item 
+										a(href="#")  Lorem ipsum dolor sit amet, consectetur.
+						-if(search==true)
+							.filter_wrapper.sea_result_wrap
+								.filter_form_wrap.search_pad
+									span Readle.ru / Результаты поиска (1-20 из 14 000 произведений по вашему запросу)
+						.right_tablet_wrapper.section_border
+						block content
+					include sectiontemplate/right
+						
+			footer
+				.footer_left.left_body_wrapper
+				include footer/template
+				.footer_right.right_body_wrapper
+		include libs/scripts
